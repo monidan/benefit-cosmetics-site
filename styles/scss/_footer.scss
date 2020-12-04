@@ -1,0 +1,156 @@
+@import "_variables";
+
+footer{
+    width: 100%;
+    background-color: white;
+    margin-top: 40px;
+    position: relative;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 30px 0 10px;
+    }
+
+    .footer__top{
+        display: flex;
+        justify-content: space-between;
+
+        .footer__product_types__navigation{
+            ul{
+                min-height: 58px;
+                height: 100%;
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                column-gap: 60px;
+                height: 300px;
+        
+                font-size: 18px;
+                font-family: $headerFont;
+                font-weight: 300;
+        
+                padding: 0;
+                margin: 0;
+
+                li{
+                    text-transform: uppercase;
+                    padding: 10px 0;
+
+                    a{
+                        color: #222222;
+                        transition: .2s;
+        
+                        &:hover{
+                            color: #828282
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer__info{
+            margin-left: 150px;
+            ul{
+                list-style-type: none;
+                font-family: $headerFont;
+                font-size: 14px;
+                font-weight: 400;
+
+                padding: 0;
+                margin: 0;
+
+                li{
+                    padding: 5px;
+
+                    a{
+                        color: #222222;
+                        transition: .2s;
+
+                        &:hover{
+                            color:#828282;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__contacts{
+
+        .footer__phone{
+            font-family: $headerFont;
+            padding-bottom: 35px;
+            a{
+                color: black;
+                font-size: 20px; 
+            }
+
+            p{
+                color:#828282;
+                font-size: 12px;
+            }
+        }
+        .footer__request_phone{
+            color: black;
+            font-size: 14px;
+            padding: 7px 33px;
+            border: 1px solid #F94877;
+            transition: .2s;
+
+            &:hover{
+                color: #F94877;
+            }
+        }
+    }
+
+    .footer__payment_type{
+
+        p{
+            font-size: 14px;
+            color: #828282;
+            font-family: $headerFont;
+            font-weight: 400;
+        }
+
+        .payment__types{
+            width: 100%;
+            display: flex;
+
+            img{
+                width: 25%;
+                height:35%;
+
+                &:last-child{
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+
+    .footer__bottom{
+        margin-top: 20px;
+
+        .footer__copyrights{
+            color: #828282;
+            font-family: $headerFont;
+            font-size: 12px;
+            padding: 0;
+            margin: 0;
+
+            a{
+                color: #F94877;
+            }
+        }
+    }
+}
+
+.navigate__top{
+    position: absolute;
+    right: 70px;
+    top: 50%;
+
+    cursor: pointer;
+}
