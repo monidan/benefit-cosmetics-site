@@ -152,6 +152,9 @@ a {
 .header__navigation_menu {
   border-bottom: 1px solid #222222;
 }
+.header__navigation_menu .navigation__menu_close_button {
+  display: none;
+}
 .header__navigation_menu ul {
   min-height: 58px;
   height: 100%;
@@ -195,7 +198,7 @@ main {
 .main__banner .banner__slide_state {
   display: flex;
   position: absolute;
-  z-index: 20;
+  z-index: 18;
   bottom: 40px;
   left: 50%;
 }
@@ -603,7 +606,6 @@ footer .footer__bottom .footer__copyrights a {
 
   body {
     font-size: 0.4rem !important;
-    width: 748px;
   }
 
   .header__small_menu {
@@ -614,7 +616,7 @@ footer .footer__bottom .footer__copyrights a {
     min-height: 60px !important;
   }
   .header__main .container {
-    width: 95%;
+    width: 100%;
     margin: 0;
     justify-content: center;
     align-items: center;
@@ -649,9 +651,11 @@ footer .footer__bottom .footer__copyrights a {
   }
   .header__main .menu__button {
     display: block !important;
-    width: 30px;
-    height: 21px;
+    height: 30px;
+    width: 40px;
     padding: 0 40px 0 20px;
+    box-sizing: content-box;
+    align-self: center;
   }
   .header__main .menu__button path {
     fill: black;
@@ -669,7 +673,55 @@ footer .footer__bottom .footer__copyrights a {
   }
 
   .header__navigation_menu {
-    display: none;
+    width: 50%;
+    display: inline-block;
+    border-bottom: none;
+    box-shadow: -2px 4px 10px 2px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 20;
+    background-color: white;
+    transform: translateX(-110%);
+    transition: 0.5s;
+    top: 0;
+  }
+  .header__navigation_menu .container {
+    padding: 2em;
+  }
+  .header__navigation_menu .navigation__menu_close_button_wrapper {
+    width: 90%;
+    display: flex;
+    margin: 0.4em auto;
+    justify-content: flex-end;
+  }
+  .header__navigation_menu .navigation__menu_close_button_wrapper button {
+    appearance: none;
+    display: flex;
+    background-color: #F94877;
+    border: none;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    padding: 1em 0.7em;
+    line-height: 0;
+  }
+  .header__navigation_menu ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .header__navigation_menu ul li {
+    margin: 0.5em 0;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
   }
 
   .main__banner {
@@ -687,7 +739,7 @@ footer .footer__bottom .footer__copyrights a {
     width: 100%;
   }
   .main__banner .main__banner_wrapper .banner__item {
-    flex: 0 0 70%;
+    flex: 0 0 100%;
     width: 100%;
   }
   .main__banner .main__banner_wrapper .banner__item img {
@@ -711,7 +763,10 @@ footer .footer__bottom .footer__copyrights a {
     row-gap: 50px;
   }
   .main__products .main__products_slider .main_product {
-    max-width: 70%;
+    width: calc(50% - 32px);
+  }
+  .main__products .main__products_slider .main__slider_price_action button svg {
+    width: 32px;
   }
   .main__products .main__products_slider__arrows {
     display: none !important;
@@ -722,15 +777,40 @@ footer .footer__bottom .footer__copyrights a {
   }
   .main__our_brands .container {
     width: 100%;
-    padding: 16px;
+    padding: 6px 16px 16px;
     box-sizing: border-box;
   }
   .main__our_brands .main__brands {
     flex-direction: column !important;
+    justify-content: space-between;
+    padding: 0;
   }
   .main__our_brands .main__brands img {
-    width: 30%;
-    margin: 0 auto;
+    width: auto;
+    margin: 2em auto;
+  }
+
+  footer .container {
+    width: 100%;
+    padding: 16px;
+  }
+  footer .container a {
+    font-size: 14px;
+  }
+  footer .footer__top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  footer .footer__top .footer__contacts {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  footer .footer__top .footer__info {
+    margin: 0;
+  }
+  footer .footer__top .footer__payment_type img {
+    margin-top: 10px;
   }
 }
 

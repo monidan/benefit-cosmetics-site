@@ -167,6 +167,10 @@
 .header__navigation_menu{
     border-bottom: 1px solid #222222;
 
+    .navigation__menu_close_button{
+        display: none;
+    }
+
     ul{
         min-height: 58px;
         height: 100%;
