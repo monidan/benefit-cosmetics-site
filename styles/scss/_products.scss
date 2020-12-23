@@ -182,26 +182,25 @@ main{
         padding-bottom: 30px;
         position: relative;
 
-        .main__products_slider__arrows{
+        & > img{
             position: absolute;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
             z-index: 12;
+            top: calc(100% - 20rem);
 
-            img {
-                padding: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: .2s;
+            background-color: rgba(255,255,255, 0.6);
+
+            &:last-of-type{
+                right: 0;
+            }
+
+            &:hover{
                 box-sizing: border-box;
-                cursor: pointer;
-                transition: .2s;
-                background-color: rgba(255,255,255, 0.6);
-
-                &:hover{
-                    box-sizing: border-box;
-                    padding: 10px;
-                    background-color: rgba(255,255,255, 0.8);
-                }
+                padding: 10px;
+                background-color: rgba(255,255,255, 0.8);
             }
         }
 

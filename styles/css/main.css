@@ -361,22 +361,20 @@ main {
   padding-bottom: 30px;
   position: relative;
 }
-.main__products .main__products_slider .main__products_slider__arrows {
+.main__products .main__products_slider > img {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
   z-index: 12;
-}
-.main__products .main__products_slider .main__products_slider__arrows img {
+  top: calc(100% - 20rem);
   padding: 10px;
   box-sizing: border-box;
   cursor: pointer;
   transition: 0.2s;
   background-color: rgba(255, 255, 255, 0.6);
 }
-.main__products .main__products_slider .main__products_slider__arrows img:hover {
+.main__products .main__products_slider > img:last-of-type {
+  right: 0;
+}
+.main__products .main__products_slider > img:hover {
   box-sizing: border-box;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.8);
