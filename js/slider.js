@@ -30,6 +30,32 @@ var multiItemSlider = (function () {
       }
     }
 
+    // const getSlideNumber = classNames => {
+    //   let sliderClass;
+
+    //   classNames.forEach(
+    //     className => {
+    //       sliderClass = className.match(/banner__slide__state_\d/);
+    //     }
+    //   );
+
+    //   return sliderClass[0].split('banner__slide__state_')[1];
+    // }
+
+    // const getCurrentSlide = () => {
+    //   let currentSlideNumber;
+    //   console.log(bannerStateEls)
+
+    //   bannerStateEls.forEach(
+    //     sliderState => {
+    //       sliderState.classList.contains('banner__state_active') ?
+    //         currentSlideNumber = 0
+    //         : currentSlideNumber = getSlideNumber(sliderState.classList);
+    //     }
+    //   )
+    //   return currentSlideNumber;
+    // }
+
   function _isElementVisible(element) {
     var rect = element.getBoundingClientRect(),
       vWidth = window.innerWidth || doc.documentElement.clientWidth,
@@ -213,8 +239,24 @@ var multiItemSlider = (function () {
       });
     }
 
+    // var _navigateToSlide = function (e) {
+    //   let navigatedSlideNumber = getSlideNumber(e.target.classList),
+    //       currentSlideNumber = getCurrentSlide();
+
+    //   if(currentSlideNumber > 0){
+    //     for(let i = 0; i < Math.abs(navigatedSlideNumber - currentSlideNumber); i++){
+    //       _transformItem('right')
+    //     }
+    //   }
+    // }
+
     var _setUpListeners = function () {
       _mainElement.addEventListener('click', _controlClick);
+      // bannerStateEls.forEach(
+      //   stateElement => {
+      //     stateElement.addEventListener('click', _navigateToSlide)
+      //   }
+      // )
       if (_config.pause && _config.isCycling) {
         _mainElement.addEventListener('mouseenter', function () {
           clearInterval(_interval);
@@ -269,5 +311,51 @@ var multiItemSlider = (function () {
 }());
 
 var slider = multiItemSlider('.main__banner_wrapper', {
-  isCycling: true
+  isCycling: false
 })
+
+const getSlideNumber = classNames => {
+  let sliderClass;
+
+  for(let className of classNames){
+    if(className.search(/banner__slide__state_\d/) != -1){
+      sliderClass = className.match(/banner__slide__state_\d/);
+    }
+  }
+
+  return sliderClass.input.split('banner__slide__state_')[1];
+}
+
+const getCurrentSlide = () => {
+  let currentSlideNumber;
+
+  for(let bannerState of bannerStateEls){
+    if(bannerState.classList.contains('banner__state_active')){
+      currentSlideNumber = getSlideNumber(bannerState.classList);
+    }
+  } 
+
+  return currentSlideNumber;
+}
+
+const navigateToSlide = (e) => {
+  let navigatedSlideNumber = getSlideNumber(e.target.classList),
+      currentSlideNumber = getCurrentSlide(),
+      slideDifference = navigatedSlideNumber - currentSlideNumber;
+
+  if(slideDifference > 0){
+    for(let i = 0; i < Math.abs(slideDifference); i++){
+      slider.right();
+    }
+  } else if(slideDifference < 0) {
+    for(let i = 0; i < Math.abs(slideDifference); i++){
+      slider.left();
+    }
+  } 
+}
+
+bannerStateEls.forEach(
+  stateElement => {
+    stateElement.addEventListener('click', navigateToSlide)
+  }
+)

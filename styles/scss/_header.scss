@@ -25,19 +25,48 @@
         height: 100%;
     }
 
-    #region__select {
-        appearance: none;
-        background-color: transparent;
-        border: none;
-        color: white;
+    label[for="region__select"]{
+        display: flex;
+        align-items: center;
+        
 
-        padding: 0 1em;
-        position: relative;
+        .header__select__wrapper{
+            display: flex;
+            align-items: center;
+            position: relative;
 
-        cursor: pointer;
+            &::after{
+                position: absolute; 
+                right: .5rem;
+                top: .23rem;
+                content: '';
+                display: block;
+                width: 5px;
+                height: 5px;
+                border: 2px solid white;
+                border-width: 1.5px 1.5px 0 0;
+                transform: rotate(135deg);
 
-        option{
-            color: black;
+                cursor: pointer;
+            }
+    
+            #region__select {
+                z-index: 2;
+                appearance: none;
+                background-color: transparent;
+                border: none;
+                color: white;   
+        
+                padding: 0 1em;
+                padding-right: 1.5rem;
+                position: relative;
+        
+                cursor: pointer;
+        
+                option{
+                    color: black;
+                }
+            }
         }
     }
 
@@ -149,12 +178,20 @@
             }
 
             .header__button{
-                width: 44px;
                 background-color: #F94877;
-                padding: 10px;
-                box-sizing: border-box;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+
+                padding: .7rem;
+                // box-sizing: border-box;
                 border-radius:50px;
                 transition: .2s;
+
+                *{
+                    width: 21px;
+                    height: 21px;
+                }
 
                 &:hover{
                     background-color: #FC104F;

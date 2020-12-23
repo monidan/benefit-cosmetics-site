@@ -12,6 +12,12 @@ a {
   margin: 0 auto;
 }
 
+.shopping-basket-icon {
+  fill: white;
+  width: 21px;
+  height: 21px;
+}
+
 .header__small_menu {
   background-color: #222222;
   width: 100%;
@@ -33,16 +39,40 @@ a {
   align-items: center;
   height: 100%;
 }
-.header__small_menu #region__select {
+.header__small_menu label[for=region__select] {
+  display: flex;
+  align-items: center;
+}
+.header__small_menu label[for=region__select] .header__select__wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header__small_menu label[for=region__select] .header__select__wrapper::after {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.23rem;
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border: 2px solid white;
+  border-width: 1.5px 1.5px 0 0;
+  transform: rotate(135deg);
+  cursor: pointer;
+}
+.header__small_menu label[for=region__select] .header__select__wrapper #region__select {
+  z-index: 2;
   appearance: none;
   background-color: transparent;
   border: none;
   color: white;
   padding: 0 1em;
+  padding-right: 1.5rem;
   position: relative;
   cursor: pointer;
 }
-.header__small_menu #region__select option {
+.header__small_menu label[for=region__select] .header__select__wrapper #region__select option {
   color: black;
 }
 .header__small_menu .header__small_menu__links {
@@ -138,12 +168,17 @@ a {
   cursor: default;
 }
 .header__main .header__main_buttons > div .header__button {
-  width: 44px;
   background-color: #F94877;
-  padding: 10px;
-  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
   border-radius: 50px;
   transition: 0.2s;
+}
+.header__main .header__main_buttons > div .header__button * {
+  width: 21px;
+  height: 21px;
 }
 .header__main .header__main_buttons > div .header__button:hover {
   background-color: #FC104F;
@@ -208,9 +243,18 @@ main {
   border-radius: 50%;
   padding: 5px;
   margin: 5px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.main__banner .banner__current_state:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0.85;
 }
 .main__banner .banner__state_active {
   background-color: #F94877;
+}
+.main__banner .banner__state_active:hover {
+  background-color: #F94877 !important;
 }
 .main__banner .container {
   width: 100%;
@@ -813,5 +857,3 @@ footer .footer__bottom .footer__copyrights a {
     margin-top: 10px;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
