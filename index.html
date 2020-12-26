@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benefit - cosmetics</title>
     <link rel="stylesheet" href="./styles/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -102,12 +103,8 @@
     <main id='main'>
         <section class="main__banner">
             <div class="main__banner_wrapper">
-                <div class="banner__arrows">
-                    <img src="./assets/left_arrow.svg" alt="" class="banner__slider_control banner__slider_left">
-                    <img src="./assets/right_arrow.svg" alt="" class="banner__slider_control banner__slider_right">
-                </div>
-                <div class="container">
-                    <div class="banner__item banner__slide_1">
+                <div class="swiper-wrapper container">
+                    <div class="swiper-slide banner__item banner__slide_1">
                         <div class="banner__item_inner">
                             <img src="./assets/banner__image-1.png" alt="" class="main__banner_image_1">
                             <img src="./assets/banner__image-2.png" alt="" class="main__banner_image_2">
@@ -115,7 +112,7 @@
                             <p>Позволь нам освежить и раскрасить твой образ!</p> 
                         </div>
                     </div>
-                    <div class="banner__item banner__slide_2"> 
+                    <div class="swiper-slide banner__item banner__slide_2"> 
                         <div class="banner__item_inner">
                             <img src="./assets/banner__image-1.png" alt="" class="main__banner_image_1">
                             <img src="./assets/banner__image-2.png" alt="" class="main__banner_image_2">
@@ -123,7 +120,7 @@
                             <p>Позволь нам освежить и раскрасить твой образ!</p> 
                         </div>
                     </div>
-                    <div class="banner__item banner__slide_3"> 
+                    <div class="swiper-slide banner__item banner__slide_3"> 
                         <div class="banner__item_inner">
                             <img src="./assets/banner__image-1.png" alt="" class="main__banner_image_1">
                             <img src="./assets/banner__image-2.png" alt="" class="main__banner_image_2">
@@ -132,12 +129,12 @@
                         </div>
                     </div>
                 </div> 
+                <div class="swiper-pagination"></div>
+                <div class="banner__arrows">
+                    <img src="./assets/left_arrow.svg" alt="" class="banner__slider_control banner__slider_left">
+                    <img src="./assets/right_arrow.svg" alt="" class="banner__slider_control banner__slider_right">
+                </div>
             </div>    
-            <div class="banner__slide_state">
-                <span class="banner__current_state banner__slide__state_1"></span>
-                <span class="banner__current_state banner__state_active banner__slide__state_2"></span>
-                <span class="banner__current_state banner__slide__state_3"></span>
-            </div>
         </section>
         
         <section class="main__products">
@@ -376,8 +373,8 @@
             <img src="./assets/up__arrow.svg" alt="">
         </div>
     </footer>
-    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/slider.js"></script>
+    <script type='module' src="./js/swiper.js"></script>
 </body>
 </html>

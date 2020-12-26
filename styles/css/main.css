@@ -230,31 +230,23 @@ main {
   position: relative;
   overflow: hidden;
 }
+.main__banner .main__banner_wrapper .swiper-pagination {
+  margin-bottom: 1.8rem;
+  z-index: 25;
+}
+.main__banner .main__banner_wrapper .swiper-pagination-bullet {
+  background-color: white;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+.main__banner .main__banner_wrapper .swiper-pagination-bullet-active {
+  background-color: #FC104F;
+}
 .main__banner .banner__slide_state {
   display: flex;
   position: absolute;
   z-index: 18;
   bottom: 40px;
   left: 50%;
-}
-.main__banner .banner__current_state {
-  display: block;
-  border: 1px solid white;
-  border-radius: 50%;
-  padding: 5px;
-  margin: 5px;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-.main__banner .banner__current_state:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  opacity: 0.85;
-}
-.main__banner .banner__state_active {
-  background-color: #F94877;
-}
-.main__banner .banner__state_active:hover {
-  background-color: #F94877 !important;
 }
 .main__banner .container {
   width: 100%;
@@ -280,7 +272,6 @@ main {
 }
 .main__banner .banner__item {
   flex: 0 0 100%;
-  max-width: 130%;
 }
 .main__banner .banner__item .banner__item_inner {
   display: flex;
