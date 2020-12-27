@@ -6,6 +6,8 @@
     <title>Benefit - cosmetics</title>
     <link rel="stylesheet" href="./styles/css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -30,12 +32,12 @@
                 </div>
             </section>
             <section class="header__main">
-                <div class="menu__button">
-                    <a href="#">
-                        <img src="./assets/menu.svg" alt="">
-                    </a>   
-                </div>
                 <div class="container">
+                    <div class="menu__button">
+                        <a href="#">
+                            <img src="./assets/menu.svg" alt="">
+                        </a>   
+                    </div>
                     <div class="header__phone">
                         <a href="tel:0-800-56-87-96">0-800-56-87-96</a>
                         <p>
@@ -78,7 +80,9 @@
             <section class="header__navigation_menu">
                 <div class="navigation__menu_close_button_wrapper">
                     <button class="navigation__menu_close_button">
-                        X
+                        <span class="material-icons">
+                            close
+                        </span>
                     </button>
                 </div>
                 <div class="container">
@@ -143,146 +147,148 @@
                     <h2>Cамое популярное</h2>
                 </header>
                 <div class="main__products_slider">
-                    <img src="./assets/left_arrow.svg" alt="">
-                    <img src="./assets/right_arrow.svg" alt="">
-                    <div class="main_product main__products_slide-1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide main_product main__products_slide-1">
                             <div class="main__product__inner">
                                 <div class="main__product_type">
-                                <span>Макияж</span>
-                                <img src="./assets/red_pomade.png" alt="Givenchy Le Roughe помада">
-                                <p>
-                                    Givenchy Le Rouge*
-                                    Помада для губ
-                                </p>
-                            </div>
-                            <div class="main__slider_price_action">
-                                <div class="main__slider_price">
-                                    <span class="price__discount">1 100грн</span>
-                                    <span>900грн</span>
+                                    <span>Макияж</span>
+                                    <img src="./assets/red_pomade.png" alt="Givenchy Le Roughe помада">
+                                    <p>
+                                        Givenchy Le Rouge*
+                                        Помада для губ
+                                    </p>
                                 </div>
-                                <button>
-                                    <svg class='shopping-basket-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
-                                    </svg>
-                                    В корзину
-                                </button>
+                                <div class="main__slider_price_action">
+                                    <div class="main__slider_price">
+                                        <span class="price__discount">1 100грн</span>
+                                        <span>900грн</span>
+                                    </div>
+                                    <button>
+                                        <svg class='shopping-basket-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
+                                        </svg>
+                                        В корзину
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="main_product main__products_slide-2">
-                        <div class="main__product__inner">
-                            <div class="main__product_type">
-                                <span>Тело и ванна</span>
-                                <img src="./assets/natural_mango_oil.png" alt="Натуральное масло">
-                                <p>
-                                    Натуральное масло "Манго"
-                                </p>
-                            </div>
-                            <div class="main__slider_price_action">
-                                <div class="main__slider_price">
-                                    <span>97грн</span>
+                        <div class="swiper-slide main_product main__products_slide-2">
+                            <div class="main__product__inner">
+                                <div class="main__product_type">
+                                    <span>Тело и ванна</span>
+                                    <img src="./assets/natural_mango_oil.png" alt="Натуральное масло">
+                                    <p>
+                                        Натуральное масло "Манго"
+                                    </p>
                                 </div>
-                                <button>
-                                    <svg class='shopping-basket-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
-                                    </svg>
-                                    В корзину
-                                </button>
+                                <div class="main__slider_price_action">
+                                    <div class="main__slider_price">
+                                        <span>97грн</span>
+                                    </div>
+                                    <button>
+                                        <svg class='shopping-basket-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
+                                        </svg>
+                                        В корзину
+                                    </button>
+                                </div>
                             </div>
-                        </div>
 
-                    </div>
-                    <div class="main_product main__products_slide-3">
-                        <div class="main__product__inner">
-                            <div class="main__product_type">
-                                <span>Волосы</span>
-                                <img src="./assets/shampoo.png" alt="Шампунь Comex">
-                                <p>
-                                    Аюрведический шампунь из индийских трав «Comex»
-                                </p>
-                            </div>
-                            <div class="main__slider_price_action">
-                                <div class="main__slider_price">
-                                    <span>62грн</span>
-                                </div>
-                                <button>
-                                    <svg class='shopping-basket-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
-                                    </svg>
-                                    В корзину
-                                </button>
-                            </div>
                         </div>
-
-                    </div>
-                    <div class="main_product main__products_slide-4">
-                        <div class="main__product__inner">
-                            <div class="main__product_type">
-                                <span>Ногти</span>
-                                <img src="./assets/red_nail_polish.png" alt="Лак для ногтей">
-                                <p>
-                                    Лак для ногтей
-                                </p>
-                            </div>
-                            <div class="main__slider_price_action">
-                                <div class="main__slider_price">
-                                    <span>132грн</span>
+                        <div class="main_product main__products_slide-3">
+                            <div class="main__product__inner">
+                                <div class="main__product_type">
+                                    <span>Волосы</span>
+                                    <img src="./assets/shampoo.png" alt="Шампунь Comex">
+                                    <p>
+                                        Аюрведический шампунь из индийских трав «Comex»
+                                    </p>
                                 </div>
-                                <button>
-                                    <svg class='shopping-basket-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
-                                    </svg>
-                                    В корзину
-                                </button>
+                                <div class="main__slider_price_action">
+                                    <div class="main__slider_price">
+                                        <span>62грн</span>
+                                    </div>
+                                    <button>
+                                        <svg class='shopping-basket-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
+                                        </svg>
+                                        В корзину
+                                    </button>
+                                </div>
                             </div>
+
                         </div>
-
-                    </div>
-                    <div class="main_product main__products_slide-5">
-                        <div class="main__product__inner">
-                            <div class="main__product_type">
-                                <span>Лицо</span>
-                                <img src="./assets/blemish_rescue_mask.png" alt="Маска для лица">
-                                <p>
-                                    Маска для лица "3 глины и морские водоросли"
-                                </p>
-                            </div>
-                            <div class="main__slider_price_action">
-                                <div class="main__slider_price">
-                                    <span>150грн</span>
+                        <div class="swiper-slide main_product main__products_slide-4">
+                            <div class="main__product__inner">
+                                <div class="main__product_type">
+                                    <span>Ногти</span>
+                                    <img src="./assets/red_nail_polish.png" alt="Лак для ногтей">
+                                    <p>
+                                        Лак для ногтей
+                                    </p>
                                 </div>
-                                <button>
-                                    <svg class='shopping-basket-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
-                                    </svg>
-                                    В корзину
-                                </button>
+                                <div class="main__slider_price_action">
+                                    <div class="main__slider_price">
+                                        <span>132грн</span>
+                                    </div>
+                                    <button>
+                                        <svg class='shopping-basket-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
+                                        </svg>
+                                        В корзину
+                                    </button>
+                                </div>
                             </div>
+
                         </div>
-
-                    </div>
-                    <div class="main_product main__products_slide-6">
-                        <div class="main__product__inner">
-                            <div class="main__product_type">
-                                <span>Мужчинам</span>
-                                <img src="./assets/cologne_men.png" alt="Одеколон мужской">
-                                <p>
-                                    Geparlys Karen Low Pure Vibe
-                                </p>
-                            </div>
-                            <div class="main__slider_price_action">
-                                <div class="main__slider_price">
-                                    <span>266грн</span>
+                        <div class="swiper-slide main_product main__products_slide-5">
+                            <div class="main__product__inner">
+                                <div class="main__product_type">
+                                    <span>Лицо</span>
+                                    <img src="./assets/blemish_rescue_mask.png" alt="Маска для лица">
+                                    <p>
+                                        Маска для лица "3 глины и морские водоросли"
+                                    </p>
                                 </div>
-                                <button>
-                                    <svg class='shopping-basket-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
-                                    </svg>
-                                    В корзину
-                                </button>
+                                <div class="main__slider_price_action">
+                                    <div class="main__slider_price">
+                                        <span>150грн</span>
+                                    </div>
+                                    <button>
+                                        <svg class='shopping-basket-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
+                                        </svg>
+                                        В корзину
+                                    </button>
+                                </div>
                             </div>
-                        </div>  
+
+                        </div>
+                        <div class="swiper-slide main_product main__products_slide-6">
+                            <div class="main__product__inner">
+                                <div class="main__product_type">
+                                    <span>Мужчинам</span>
+                                    <img src="./assets/cologne_men.png" alt="Одеколон мужской">
+                                    <p>
+                                        Geparlys Karen Low Pure Vibe
+                                    </p>
+                                </div>
+                                <div class="main__slider_price_action">
+                                    <div class="main__slider_price">
+                                        <span>266грн</span>
+                                    </div>
+                                    <button>
+                                        <svg class='shopping-basket-icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/>
+                                        </svg>
+                                        В корзину
+                                    </button>
+                                </div>
+                            </div>  
+                        </div>
                     </div>
+                    <img src="./assets/left_arrow.svg" alt="Left arrow" class="products__slider_left">
+                    <img src="./assets/right_arrow.svg" alt="Right arrow" class="product__slider_right">
                 </div>
             </div>
         </section>

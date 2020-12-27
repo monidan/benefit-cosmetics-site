@@ -13,13 +13,15 @@
     function showMenu(e) {
         e.preventDefault();
         const navigationMenuEl = document.querySelector('.header__navigation_menu');
-        navigationMenuEl.style.transform = 'translateX(0)';
+        navigationMenuEl.style.transform = 'translateY(0)';
+        menuButtonEl.style.opacity = 0
     }
 
     function closeMenu(e) {
         e.preventDefault();
         const navigationMenuEl = document.querySelector('.header__navigation_menu');
-        navigationMenuEl.style.transform = 'translateX(-120%)'
+        navigationMenuEl.style.transform = 'translateY(-120%)'
+        menuButtonEl.style.opacity = 1
     }
 
     navigateTopArrowEl.addEventListener('click', scrollTop);
